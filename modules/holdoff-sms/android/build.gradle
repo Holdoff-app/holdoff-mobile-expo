@@ -1,0 +1,20 @@
+plugins {
+  id 'com.android.library'
+  id 'kotlin-android'
+}
+
+group = 'expo.modules.holdoffsms'
+version = '1.0.0'
+
+android {
+  namespace 'expo.modules.holdoffsms'
+  compileSdkVersion safeExtGet('compileSdkVersion', 35)
+
+  defaultConfig {
+    minSdkVersion safeExtGet('minSdkVersion', 24)
+  }
+}
+
+dependencies {
+  implementation project(':expo-modules-core')
+}

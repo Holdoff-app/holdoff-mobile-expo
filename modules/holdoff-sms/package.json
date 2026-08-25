@@ -1,0 +1,13 @@
+{
+  "name": "holdoff-sms",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "expo": {
+    "autolinking": {
+      "android": {
+        "modules": ["expo.modules.holdoffsms.HoldOffSmsModule"]
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+# Project TODO
+
+- [x] Establish Midnight Velvet theme tokens and reusable mobile UI primitives.
+- [x] Create versioned AsyncStorage model for onboarding, drafts, people, interpretations, consents, preferences, and local pattern events.
+- [x] Implement route-guarded seven-step onboarding with disclosures, consent, and trusted contact.
+- [x] Implement five-tab HoldOff navigation with a persistent, context-aware Sadie companion.
+- [x] Add services/sadieService.ts as the sole typed service interface for message analysis, interpretation, and companion chat.
+- [x] Implement Hold draft capture, transparent writing cues, CLEAR and HOLD verdict actions, pause timer, draft state chips, and local copy/confirmation flow.
+- [x] Implement AI-only Spiral Lock escalation handling with preserved drafts, choices, uncertainty disclosure, and 988/trusted-contact guidance for self-harm language.
+- [x] Implement Interpret analysis with uncertainty disclosure and healthy reply approaches.
+- [x] Implement local People, personal threads, and history-aware relationship insight empty states.
+- [x] Implement consent-aware Patterns timeline and transparent writing-based pattern cards.
+- [x] Implement Settings controls, consent revocation, trusted-contact management, export, double-confirm deletion, accurate capability statements, and pricing preview.
+- [x] Generate a custom HoldOff app icon and update all required app branding assets and metadata.
+- [x] Add deterministic tests for local analysis, persistence utilities, and safety-path state handling.
+- [x] Verify the project type checks and validate mobile layouts and disclosures before delivery.
+- [x] Add a user-controlled SMS composer handoff for ready-to-send drafts, with clear platform limitations and local sent confirmation.
+- [x] Add a consent-led selected SMS thread import flow that keeps imported content local and never performs background message access.
+- [x] Diagnose and restore HoldOff visibility in the project preview and user review flow.
+- [x] Diagnose and fix the reported blank white screen in the HoldOff preview.
+- [x] Diagnose and fix the confirmed Android native blank-content screen shown after launching HoldOff.
+- [ ] Reopen and fully resolve the Android blank-content screen after the previous file-system repair did not fix the installed runtime.
+- [x] Assess and implement a compliant Android default-SMS-app role request or clearly scoped default messaging handoff.
+- [x] Design and implement the staged Android SMS-client foundation: role eligibility, messaging model, default-role activation boundary, privacy disclosures, and native integration plan.
+- [ ] Build the dedicated native Android SMS client required for actual default-handler eligibility: manifest-qualified receivers, durable inbox, send/receive pipeline, notifications, role bridge, permission flow, privacy policy, and Play review materials.
+- [ ] Implement the native Android SMS receiver, outbound send status, and notification bridge with role-first permission safeguards.
+- [x] Restore the interrupted HoldOff development server and validate its runtime after the native SMS dependency update.
+- [ ] Inspect and resolve remaining native SMS integration build or runtime errors from the development logs.
+- [x] Check the development server and validate the native SMS send pipeline without transmitting a real message.
+- [x] Wire the default-SMS activation control to invoke the native Android role-request bridge with preview-safe feedback.
+- [x] Request runtime SMS permissions only after Android confirms HoldOff is the active default-SMS handler.
+- [x] Add contextual SMS permission-denial guidance that explains the impact, offers an optional retry, and preserves manual HoldOff use.
+- [x] Add an explicit Android app-settings recovery button for users who choose to revisit permanently denied SMS permissions.
+- [x] Refresh Android default-SMS role and runtime permission status automatically when HoldOff returns to the foreground from Settings.
+- [x] Show a brief accessible confirmation when HoldOff returns from Settings and detects newly granted SMS permissions.
+- [x] Document the current Google Play and Android default-SMS policy requirements and identify HoldOff’s remaining compliance gaps.
+- [ ] Complete HoldOff’s app-side Android default-SMS release-readiness gate, including compliance documentation, privacy controls, manual fallback, and physical-device validation checklist.
+- [ ] Rebuild HoldOff as an Android-first default messenger with inbox, threads, native send/receive, notifications, role and permission activation, privacy, migration, and release gates as the core product architecture.
+- [ ] Preserve and embed HoldOff’s holds, Sadie assistance, interpretation, people, patterns, consent, safety, and privacy features directly in the default-messenger inbox, thread, and composer flows.
+- [x] Build a real-time, user-controlled HoldOff pause at the send decision in every active conversation, allowing people to hold, revise, or send without silent interception or automatic messaging.
+- [x] Add a pre-consented, reversible Spiral Lock setting that may hold selected outgoing messages before transmission, with clear reason, review, revise, release, and disable controls.
+- [ ] Add an explicit trusted-contact Spiral Lock support setting with a designated recipient, editable support message, clear disclosure, cancellation path, delivery status, revocation, and physical-device opt-in testing only.
+- [x] Merge durable native inbound, sent, delivered, and failed events into the local SMS model with normalized-address grouping, idempotent unread counts, persistence-before-acknowledgment, and deterministic tests.
+- [x] Make Messages the primary navigation destination and build local inbox, conversation, send-status, and held-message surfaces without inventing SMS history or delivery.
+- [x] Build the real-time user-controlled composition decision gate and opt-in local-cue Spiral Lock hold behavior, with deterministic enabled/disabled boundary tests.
+- [x] Build the Settings surfaces for explicit Spiral Lock consent, cue selection, trusted-contact support setup, acknowledgement, visible cancellation, and revocation controls.
+- [x] Prepare publication-ready privacy-policy and Android release-readiness drafts with an explicit device test matrix and Play submission checklist.
+- [ ] Add native Android notification deep links so tapping an incoming-SMS alert opens the corresponding HoldOff conversation thread.
+- [x] Implement and statically validate the incoming-notification conversation URI, Android intent, root link handler, manifest scheme metadata, and deterministic URL-routing tests.
+- [ ] Group incoming Android SMS notification updates by conversation so repeat messages replace the same thread alert rather than cluttering the notification tray.
+- [ ] Complete all remaining HoldOff application and native Android messenger logic, with automated validation for sandbox-testable paths and explicit physical-device release gates for everything platform-dependent.
+- [x] Mark a conversation read on entry and clear its matching native notification without clearing other conversation alerts.
+- [x] Preserve the strongest outgoing delivery state during duplicate or out-of-order multipart Android status callbacks, and treat failed delivery callbacks as failures.
+- [x] Replace the respond-via-message service stub with a durable, role-gated quick-reply path that preserves HoldOff’s visible send/hold decision.
+- [x] Reconcile onboarding, activation, and capability disclosures with the implemented opt-in trusted-contact and native-messenger behavior.
+- [x] Implement stable per-conversation notification tags and Android grouping metadata so same-thread alerts update instead of accumulating.
+- [x] Add a role- and permission-gated, user-initiated local SMS history import with bounded records, local persistence, and receiver/provider duplicate suppression.
+- [x] Complete the identified in-app and native SMS logic paths for conversation reads, direct send validation, durable events, sender-thread notification updates, deep links, reply handoff, holds, Spiral Lock, and trusted-contact support.
+- [x] Add local conversation search and explicit-permission device contact-name resolution with safe phone-number fallback behavior.
+- [ ] Verify Android contact-permission approval, denial, ambiguous-number fallback, and contact-label clearing on a rebuilt physical-device installation.
+- [x] Highlight locally matched name, phone-number, and message-preview text in conversation search results.
+- [x] Add opt-in, on-device emotional-spiral detection for the current message composition with transparent cues and user-controlled pause, revise, or send choices.
+- [x] Add a separate user-invoked current-draft message analysis action with consent-aware reflection and no silent inbox analysis.
+- [x] Add user-invoked full opened-conversation history analysis with explicit inclusion disclosure, consent confirmation, and no background conversation scanning.
+- [x] Use an attachment-informed, non-diagnostic reflection framework for optional draft and full-thread analysis without labeling either participant.
+- [x] Integrate Sadie as an explicit, consent-aware companion within active message threads, linking draft reflection, disclosed thread analysis, and user-controlled support chat.
+- [x] Add a one-tap action that places Sadie’s current-draft rewrite into the composer without sending it.
+- [x] Add user-selectable empathetic and direct Sadie rewrite tone options for the current draft.
